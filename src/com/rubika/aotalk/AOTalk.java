@@ -428,7 +428,7 @@ public class AOTalk extends Activity {
     
     //Let user select server during the connection
 	private void setServer() {
-    	final CharSequence servers[] = {"Atlantean", "Rimor", "TestLive"};
+    	final CharSequence servers[] = {"Rubi-Ka", "RK 2019", "TestLive"};
 
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle(AOTalk.this.getString(R.string.select_server));
@@ -440,16 +440,16 @@ public class AOTalk extends Activity {
 				loader.setMessage(getResources().getString(R.string.please_wait));
 				loader.show();
     	    	
-    	    	if(servers[item].toString().equals("Atlantean")) {
+    	    	if(servers[item].toString().equals("Rubi-Ka")) {
     	    		new Thread() {
     		            public void run() {
-    		            	AOTalk.this.bot.setServer(DimensionAddress.RK1);
+    		            	AOTalk.this.bot.setServer(DimensionAddress.RK5);
     		        	}
     				}.start();
-    	    	} else if(servers[item].toString().equals("Rimor")) {
+    	    	} else if(servers[item].toString().equals("RK 2019")) {
     	    		new Thread() {
     		            public void run() {
-    		            	AOTalk.this.bot.setServer(DimensionAddress.RK2);
+    		            	AOTalk.this.bot.setServer(DimensionAddress.RK6);
     		        	}
     				}.start();
     	    	} else {

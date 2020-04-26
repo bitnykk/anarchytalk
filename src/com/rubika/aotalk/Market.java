@@ -151,10 +151,10 @@ public class Market extends Activity {
 		public void run() {
 			String statustext = "";
 			
-			if(SERVER.equals("0")) {
-				statustext = "Atlantean";
-			} else if(SERVER.equals("1")) {
-				statustext = "Rimor";
+			if(SERVER.equals("5")) {
+				statustext = "Rubi-Ka";
+			} else if(SERVER.equals("6")) {
+				statustext = "RK 2019";
 			} else {
 				statustext = "TestLive";
 			}

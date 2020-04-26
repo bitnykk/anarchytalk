@@ -22,16 +22,15 @@ package ao.protocol;
 
 /**
  * <p>AODimensionAddress is primarily a utility class that stores
- * the urls and ports of RK1, RK2, and RK3.</p>
+ * the urls and ports of RK5, RK6, and Test.</p>
  * 
- * <p>FIXME: The url and port pairs seem to be incorrect for RK2 and RK3.</p>
+ * <p>OLD: The url and port pairs seemed to be incorrect for RK2 and RK3.</p>
  * 
  * @author Paul Smith
  */
 public enum DimensionAddress {
-    RK1("Atlantean (Rubi-Ka 1)",         "chat.d1.funcom.com", 7101),
-    RK2("Rimor (Rubi-Ka 2)",             "chat.d2.funcom.com", 7102),
-    //RK3("Die Neue Welt (German Server)", "chat.d3.funcom.com",  7103),
+    RK5("Rubi-Ka 1",         "chat.d1.funcom.com", 7105),
+    RK6("RK 2019",             "chat.d1.funcom.com", 7106),
     TEST("Test-Live (Test Server)",      "chat.dt.funcom.com", 7109);
     
     private final String m_name;
