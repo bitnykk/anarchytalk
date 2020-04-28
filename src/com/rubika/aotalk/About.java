@@ -34,7 +34,7 @@ public class About extends Activity {
         
         WebView about = (WebView) findViewById(R.id.about);
         about.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        about.setBackgroundColor(Color.parseColor("#062c36"));
+        about.setBackgroundColor(Color.parseColor("#010203"));
         
         about.loadUrl("file:///android_asset/about.html");
 	}

@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-	android:background="#062c36"
+	android:background="#010203"
 	>
   	<WebView
 	android:id="@+id/web"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:background="#062c36"
+	android:background="#010203"
 	/>
 </LinearLayout>

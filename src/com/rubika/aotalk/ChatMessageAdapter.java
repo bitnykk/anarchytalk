@@ -81,7 +81,23 @@ public class ChatMessageAdapter extends BaseAdapter {
        	message.setTextColor(Color.parseColor(color));
         
         message.setText("");
-        message.append(Html.fromHtml(entry.getMessage()));
+//      message.append(Html.fromHtml(entry.getMessage())); // desactivated ...
+// ... was removing all ao links inner contents hence reformattings below ...
+        String htmlString = entry.getMessage().toString(); // import raw datas
+//      message.append(htmlString+"\n"); // initial DEBUG
+        String fontRegul = "<font (?:[^>]+)>(.+?)</font>"; // eliminate fonts
+        String nofontString = htmlString; // create filtered
+        nofontString = nofontString.replaceAll(fontRegul, "$1"); // apply filter
+//        nofontString = nofontString.replaceAll(fontRegul, "$1"); // second pass
+        String hrefRegul = "<a href=[/\\\\]{0,2}[\"|'](?:text|chatcmd):[/\\\\]{2,3}(.+?)[/\\\\]{0,2}[\"|']>(.+?)</a>"; // manage links
+        String clearString = nofontString; // instance exploded
+        clearString = clearString.replaceAll(hrefRegul, "<br />$2 [$1]<br />"); // apply explosion
+//        clearString = clearString.replaceAll(hrefRegul, "<br />$2 [$1]<br />"); // second pass
+//       message.append(clearString+"\n"); // reformat DEBUG
+        String textConv = Html.fromHtml(clearString).toString();
+        textConv = textConv.replaceAll("\">", ""); // final cleanup        
+        message.append(textConv); // final       
+// ... end of ao specific links reformat
         message.setMovementMethod(LinkMovementMethod.getInstance());
                 
         return convertView;

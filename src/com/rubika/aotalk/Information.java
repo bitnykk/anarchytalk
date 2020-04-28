@@ -48,7 +48,7 @@ public class Information extends Activity {
 	
 	protected static final String HTML_START = 
 		"<html><head></head><style type=\"text/css\">" +
-		"body { background-color:#062c36; color:#ffffff; font-size:0.9em; }" +
+		"body { background-color:#010203; color:#ffffff; font-size:0.9em; }" +
 		"a { color:#4444ff; }" +
 		".item { float:right; }" +
 		".icon { margin:0 5px 0 0; position:relative; top:-2px; vertical-align:middle; }" +
@@ -100,7 +100,7 @@ public class Information extends Activity {
 
         info = (WebView) findViewById(R.id.web);
         info.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        info.setBackgroundColor(Color.parseColor("#062c36"));
+        info.setBackgroundColor(Color.parseColor("#010203"));
         
         info.setWebViewClient(new WebViewClient() {  
             @Override
@@ -204,12 +204,12 @@ public class Information extends Activity {
 	        while(matcher.find()) {
 	        	text = text.replace(
 		        	"<img src=rdb://" + matcher.group(1) + ">", 
-		        	"<img src=\"http://www.rubi-ka.com/image/icon/" + matcher.group(1) + ".gif\" class=\"icon\">"
+		        	"<img src=\"https://static.aoitems.com/icon/" + matcher.group(1) + ".gif\" class=\"icon\">"
 	        	);
 	        	
 	        	text = text.replace(
 			        "<img src='rdb://" + matcher.group(1) + "'>", 
-			        "<img src=\"http://www.rubi-ka.com/image/icon/" + matcher.group(1) + ".gif\" class=\"icon\">"
+			        "<img src=\"https://static.aoitems.com/icon/" + matcher.group(1) + ".gif\" class=\"icon\">"
 		        );	        	
 	        }
 	        

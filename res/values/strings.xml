@@ -6,7 +6,7 @@
     <string name="widget_name_large">AnarchyTalk (4x2)</string>
     <string name="welcome">Welcome to AnarchyTalk!</string>
     <string name="widget_welcome">AnarchyTalk by Novagen</string>
-    <string name="about">\n\nMade by Novagen (RK1)\nBased on the Java AOChat API by Losobie</string>
+    <string name="about">\n\nMade by Novagen (RK1)\nUpdated by Bitnykk (2020)\nBased on the Java AOChat API by Losobie</string>
     <string name="aouniverse">\n\nIn cooperation with AO Universe</string>
     <string name="connect">Connect</string>
     <string name="authenticate">Authenticate</string>
