@@ -87,6 +87,7 @@ public class AOTalk extends Activity {
 	private String LASTMESSAGE = "";
 	
 	private Button channelbutton;
+	private Button menubutton;	
 	private EditText msginput;
 	private Context context;
 	private ProgressDialog loader;
@@ -262,6 +263,17 @@ public class AOTalk extends Activity {
 		});
         
         setButtonText();
+        
+
+        menubutton = (Button) findViewById(R.id.hamburger);
+        menubutton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				openOptionsMenu();
+			}
+		});           
+        
+        AOTalk.this.menubutton.setText("...");
 		
         msginput = (EditText) findViewById(R.id.msginput);
         msginput.setOnKeyListener(new OnKeyListener() {

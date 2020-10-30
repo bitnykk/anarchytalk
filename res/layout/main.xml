@@ -7,6 +7,12 @@ android:layout_height="fill_parent"
 android:id="@+id/main"
 android:keepScreenOn="true"
 >
+	<Button
+	android:id="@+id/hamburger"
+	android:layout_width="120dip"
+	android:layout_height="49dip"
+	android:textSize="12dip"
+	/>
     <LinearLayout
 	android:id="@+id/messages"
 	android:layout_width="fill_parent"
